@@ -1,0 +1,6 @@
+#!/usr/bin/execlineb -P
+
+with-contenv
+luajit /tmp/apply-from-env.lua
+# Test configuration to verify ok
+nginx -t

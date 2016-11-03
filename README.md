@@ -2,6 +2,9 @@
 
 A docker image to automatically set up a front router (reverse proxy) for linked web containers.
 
+The original author was Christian Lück <christian@lueck.tv>, however this version includes enhancements by
+Thomas Harning Jr. <harningt@gmail.com>.
+
 ## About FrontRoute
 
 [Docker](https://www.docker.io) is a great tool when it comes to setting up dedicated and isolated environments.
@@ -17,7 +20,7 @@ No additional configuration required, besides linking each of your existing web 
 
 ## Usage
 
-This docker image is available as a [trusted build on the docker index](https://index.docker.io/u/clue/frontroute/),
+This docker image is available as a [trusted build on the docker index](https://index.docker.io/u/harningt/frontroute/),
 so using this image for the first time will start a download automatically.
 Further runs will be immediate, as the image will be cached locally.
 
@@ -61,7 +64,7 @@ $ docker run -d --name h5ai clue/h5ai
 Finally, all we have to do is start our new front router container by linking each of the webserver instances like this:
 
 ```bash
-$ docker run -d -p 80:80 --link ttrss:ttrss --link h5ai:h5ai clue/frontroute
+$ docker run -d -p 80:80 --link ttrss:ttrss --link h5ai:h5ai harningt/frontroute
 ```
 
 This will start the frontrouter container in a detached session in the background.

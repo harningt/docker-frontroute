@@ -1,5 +1,6 @@
 FROM ubuntu
-MAINTAINER Christian Lück <christian@lueck.tv>
+MAINTAINER Thomas Harning Jr. <harningt@gmail.com>
+# Original Author: Christian Lück <christian@lueck.tv>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
 	nginx php5-cli

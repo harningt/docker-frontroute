@@ -115,6 +115,6 @@ end
 config = config .. [[
 }
 ]]
-local f = assert(io.open("/etc/nginx/sites-enabled/default", "w"))
+local f = assert(io.open("/etc/nginx/site.conf", "w"))
 assert(f:write(config))
 f:close()
